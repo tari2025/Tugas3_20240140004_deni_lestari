@@ -8,4 +8,16 @@ function kirimData(event) {
   var tanggal = document.getElementById("tanggal").value; 
   var alamat = document.getElementById("alamat").value;
 
+  // validasi semua kolom terisi
+  if (!nama || !nim || !angkatan || !alamat || !bidang || !tanggal) {
+    alert("Mohon lengkapi semua data.");
+    return;
+  }
+
+  // Pastikan bidang sudah dipilih
+  if (!bidang) {
+    alert("Mohon pilih bidang.");
+    return;
+  }
+
   
