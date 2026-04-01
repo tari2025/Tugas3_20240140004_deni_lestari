@@ -20,4 +20,29 @@ function kirimData(event) {
     return;
   }
 
-  
+  var nilaiBidang = bidang.value; 
+
+  alert(
+    "Nama : " + nama +
+    "\nNIM : " + nim +
+    "\nAngkatan : " + angkatan +
+    "\nBidang : " + nilaiBidang +
+    "\nTanggal : " + tanggal +  
+    "\nAlamat : " + alamat 
+  );
+
+  clearForm();
+}
+
+function clearForm() {
+  document.getElementById("nama").value = ""; 
+  document.getElementById("nim").value = "";   
+  document.getElementById("angkatan").value = "";
+  document.getElementById("tanggal").value = ""; 
+  document.getElementById("alamat").value = "";
+
+  var radioButtons = document.querySelectorAll('input[name="bidang"]');
+  for (var i = 0; i < radioButtons.length; i++) {
+    radioButtons[i].checked = false;
+  }
+}
